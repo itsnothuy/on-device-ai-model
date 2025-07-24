@@ -1,0 +1,40 @@
+flowchart LR
+    %% Title
+    %% architecture-beta
+
+    subgraph device[Android Device]
+    end
+
+    subgraph ui[UI Layer]
+        avatar[Avatar Renderer]
+        chat[Chat Interface]
+    end
+
+    subgraph ai[On-Device AI]
+        stt[Speech-to-Text]
+        llm[LLM Engine]
+        tts[Text-to-Speech]
+        vecdb[Vector Store]
+    end
+
+    subgraph data[Data Layer]
+        store[Knowledge Store]
+    end
+
+    subgraph sensors[Sensors]
+        mic[Microphone]
+        localSens[Local Sensors]
+        remoteSens[Remote Sensors]
+    end
+
+    %% Edges
+    mic --> stt
+    stt --> llm
+    llm --> tts
+    llm --> vecdb
+    vecdb --> llm
+    store --> vecdb
+    llm --> chat
+    tts --> avatar
+    localSens --> llm
+    remoteSens --> llm
