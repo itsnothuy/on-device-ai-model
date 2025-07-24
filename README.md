@@ -1,21 +1,3 @@
-Perfect. I’ll put together a full system design and development plan for building and shipping an on-device frontier model app that runs entirely on flagship Android phones.
-
-The MVP will focus on:
-• A local meeting summarizer and personal search assistant.
-• Using a well-chosen LLM (e.g. Phi-3 Mini or Llama 3 variants) after comparing all viable models.
-• Supporting on-device few-shot and continuous learning first, with room for fine-tuning in later releases.
-• Full Android GUI interface, with end-to-end private, offline operation.
-
-I'll also provide:
-
-* Architecture diagrams
-* Tech stack rationale
-* Folder/file code layout at SWE industry standards
-* MVP plan first, with incremental build and implementation support.
-
-I’ll now begin research to compare model options, training strategies, and Android platform capabilities, and organize all of this into a detailed system design. I’ll notify you once the documentation and plan are ready.
-
-
 # On-Device Frontier AI Models – System Design and Development Plan
 
 ## Project Overview and Objectives
@@ -51,6 +33,5 @@ Building an on-device AI assistant pushes the frontier of what mobile apps can d
   Building such an advanced mobile AI assistant is **cutting-edge** in 2025. It will stand out on a CS graduate résumé, as it shows experience with the latest AI (on-device LLMs) and ability to deliver a full A-to-Z project (from concept and design to implementation and deployment). This indicates to employers or research programs that you can handle complex challenges and innovate solutions. Moreover, on-device AI is a hot area (even big tech companies are moving toward small efficient models on devices), so this project aligns with industry trends and will make you conversant with the state-of-the-art.
 
 ## System Architecture Overview
-
-[...]
+...
 
