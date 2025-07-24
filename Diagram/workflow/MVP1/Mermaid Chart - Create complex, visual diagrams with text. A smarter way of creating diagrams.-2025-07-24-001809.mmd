@@ -1,0 +1,25 @@
+%%{init: { "theme": "base", "flowchart": { "diagramPadding": 8 } }}%%
+flowchart LR
+    phone([Phone]) --> stt[Text]
+    %% stt --> diar[Speaker Diarization]
+    %% diar --> nameAttr[Name Attribution]
+    %% nameAttr --> speakers[(Speakers Data File)]
+    stt --> ctxt[Contextualisation of Utterances]
+    ctxt --> short[[Short-Term Context]]
+    ctxt --> long[[Long-Term Context]]
+    short & long --> llm[LLM Dialogue Engine]
+    %% llm --> tts[Text-to-Speech]
+    llm --> retr[File Vectorisation]
+    retr --> store[(Local Knowledge Store)]
+    llm -.-> webReq((Web Request))
+    webReq -.-> weather[[Weather]]
+    webReq -.-> search[[Web Search]]
+    %% webReq -.-> iot[[IoT / Remote Sensors]]
+    %% iot --> sensorFuse[Sensor Data Fusion]
+    %% sensorFuse --> llm
+    %% tts --> avatar[Real-Time Avatar Animation]
+    %% avatar --> faceProj[3-D Face Projection]
+    %% avatar --> screenAv[On-Screen Avatar]
+
+    classDef node fill:#f6f6f6,stroke:#333,stroke-width:1px,font-size:12px;
+    class mic,stt,diar,nameAttr,speakers,ctxt,short,long,llm,tts,retr,store,webReq,weather,search,iot,sensorFuse,avatar,faceProj,screenAv node;
